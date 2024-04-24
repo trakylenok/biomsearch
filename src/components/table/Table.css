@@ -1,47 +1,46 @@
 .table-container {
     overflow-x: auto;
-  }
+}
   
-  table {
-    width: 100%;
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
   
+th, td {
+  border: 1px solid #dbbfbf;
+  padding: 8px;
+  text-align: left;
+}
+  
+th {
+  background-color: #f7d5d5;
+}
+
+tbody tr:hover {
+  background: rgb(246, 233, 233);
+}
+  
+@media (max-width: 768px) {
   th, td {
-    border: 1px solid #dbbfbf;
-    padding: 8px;
-    text-align: left;
+    font-size: 14px;
   }
-  
+}
+
+@media screen and (max-width: 600px) {
+  th, td {
+    font-size: 11px;
+    padding: 3px 5px 3px 3px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  th, td {
+    font-size: 8px;
+    padding: 0 5px 0 3px;
+  }
   th {
-    background-color: #f7d5d5;
+    font-size: 7px;
   }
-
-  tbody tr:hover {
-    background: rgb(246, 233, 233);
-  }
-  
-  @media (max-width: 768px) {
-    th, td {
-      font-size: 14px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    th, td {
-      font-size: 11px;
-      padding: 3px 5px 3px 3px;
-    }
-  }
-
-  @media screen and (max-width: 440px) {
-    th, td {
-      font-size: 8px;
-      padding: 0 5px 0 3px;
-    }
-    th {
-      font-size: 7px;
-    }
-  }
-  
+}
