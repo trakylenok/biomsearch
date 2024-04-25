@@ -34,7 +34,11 @@ const App = () => {
         className="search-input"
       />
 
-      <Table data={filteredData} />
+      {filteredData.name.length > 0 ? (
+        <Table data={filteredData} />
+      ) : (
+        <p className="no-results">No results :(</p>
+      )}
     </div>
   );
 };
