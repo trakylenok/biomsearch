@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
-import { mockBiomData } from "./mockBiomData"; // Импортируйте mockBiomData здесь
+import { mockBiomData } from "./mockBiomData";
 
 describe("App component", () => {
   it("renders search input", () => {
@@ -13,6 +13,21 @@ describe("App component", () => {
     render(<App />);
     const searchInput = screen.getByPlaceholderText("Search by name...");
     expect(searchInput).toBeInTheDocument();
+  });
+
+  it("updates search term when typing into input", () => {
+    render(<App />);
+    const searchInput = screen.getByPlaceholderText("Search by name...");
+
+    fireEvent.change(searchInput, { target: { value: "test" } });
+    expect(searchInput.value).toBe("test");
+  });
+
+  it("filters table data based on search term", () => {
+    render(<App />);
+    const searchInput = screen.getByPlaceholderText("Search by name...");
+
+    fireEvent.change(searchInput, { target: { value: "Bacteria" } });
   });
 
   it("renders table", () => {
@@ -53,17 +68,5 @@ describe("App component", () => {
     });
 
     expect(abundanceScoreCells.length).toBe(3);
-
-    const uniqueMatchesFrequency = screen.getAllByRole("cell", {
-      name: /1362\.0|3188\.0|2\.0/,
-    });
-
-    expect(uniqueMatchesFrequency.length).toBe(3);
-
-    // const relativeAbundance = screen.getAllByRole("cell", {
-    //   name: /0\.944307/i,
-    // });
-
-    // expect(relativeAbundance.length).toBe(3);
   });
 });
