@@ -1,3 +1,7 @@
+# Demo
+
+https://biomsearch-30eda.web.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -39,32 +43,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Firebase setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to the [website](https://firebase.google.com).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Here you should log into your google account and ["Go to console"](https://console.firebase.gooogle.com).
 
-### Code Splitting
+Add project -> Let's start with a name for your project -> Enable Google Analytics for this project (off) -> create project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Authentication: Configure the login method -> email address and password -> Add user -> Configure email and come up with a password.
 
-### Analyzing the Bundle Size
+## Application Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+First of all, you need to go to firebase -> hosting -> get started and start setting up Firebase Hosting.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In the console, we write `npm install -g firebase-tools`. We write `firebase login`, after `firebase init` (in the root folder) and answer the questions. After that, we write `firebase deploy` and the application will become available across two domains.
