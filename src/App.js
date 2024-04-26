@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
+import biomData from "./resolvers/BiomData";
 import Table from "./components/table/Table";
-import biomData from "./components/BiomData";
+
 import "./App.css";
 
 const App = () => {
