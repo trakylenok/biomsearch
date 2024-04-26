@@ -1,12 +1,13 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
+
 import App from "./App";
 import { mockBiomData } from "./mockBiomData";
 
 describe("App component", () => {
   it("renders search input", () => {
-    jest.mock("./components/BiomData", () => ({
-      ...jest.requireActual("./components/BiomData"),
+    jest.mock("./resolvers/BiomData", () => ({
+      ...jest.requireActual("./resolvers/BiomData"),
       biomData: mockBiomData,
     }));
 

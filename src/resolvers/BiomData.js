@@ -17,7 +17,6 @@ const generateBiomData = () => {
   });
 
   biom.data.forEach((elem, index) => {
-    console.log(elem);
     if (index % 3 === 0) biomData.relativeAbundance.push(elem[2]);
     else if (index % 3 === 1) biomData.abundanceScore.push(elem[2]);
     else if (index % 3 === 2) biomData.uniqueMatchesFrequency.push(elem[2]);
